@@ -1,0 +1,24 @@
+# 提升github克隆仓库龟速的提升办法
+
+需要手动的修改一下的host表，让我们要查询的网址直接指向github的ip地址，就可以享受非一般的速度，具体的操作步骤如下：
+  ***注：github的cdn IP会不定时的改动，如果clone失败的时候，则再到ipaddress去重新查询，然后更新相应的IP地址即可。
+
+1. 登录：http://ipaddress.com/
+
+2. 依次输入查询，搜索以下几个站点的IP地址：
+  ⑴ github.com
+  ⑵ assets-cdn.github.com
+  ⑶ avatars0.githubusercontent.com
+  ⑷ avatars1.githubusercontent.com
+  ⑸ github.global.ssl.fastly.net
+
+3. 将查询到的IP地址信息写入hosts：
+  #github-dns
+  192.30.253.113 github.com
+  185.199.108.153 assets-cdn.github.com
+  185.199.109.153 assets-cdn.github.com
+  185.199.110.153 assets-cdn.github.com
+  185.199.111.153 assets-cdn.github.com
+  199.232.28.133 avatars0.githubusercontent.com
+  199.232.28.133 avatars1.githubusercontent.com
+  199.232.5.194 github.global.ssl.fastly.net
